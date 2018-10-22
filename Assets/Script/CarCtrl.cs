@@ -24,11 +24,14 @@ public class CarCtrl : Agent
         float y = Input.GetAxis("Vertical");
         wheels[0].steerAngle = x * maxAngle;
         wheels[1].steerAngle = x * maxAngle;
-
-
         wheels[2].motorTorque = y * maxMotor;
         wheels[3].motorTorque = y * maxMotor;
         SetWc();
+        if (Input.GetKey(KeyCode.Space))
+        {
+            wheels[2].motorTorque = 0;
+            wheels[3].motorTorque = 0;
+        }
     }
     private void SetWc()
     {
