@@ -37,7 +37,8 @@ public class Ren : MonoBehaviour
 
     void DoAct(double act)
     {
-        rb.AddForce(transform.right * (float)act);
+        rb.AddForce(-transform.right * (float)act);
+        print(act);
     }
 
     void SaveStore()

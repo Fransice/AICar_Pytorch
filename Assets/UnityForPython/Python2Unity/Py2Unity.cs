@@ -7,7 +7,7 @@ using UnityEngine;
 public class Py2Unity
 {
     private static Py2Unity _instance;
-    
+
     public static Py2Unity Instance
     {
         get
@@ -31,7 +31,7 @@ public class Py2Unity
         }
         StartPython();
         socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        socket.Connect("127.0.0.1", 7758);
+        socket.Connect("127.0.0.1", 8989);
     }
 
     private void StartPython()

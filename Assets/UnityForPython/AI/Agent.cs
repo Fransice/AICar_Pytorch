@@ -42,8 +42,8 @@ public class Agent : MonoBehaviour
     public void FixedUpdate()
     {
         double[] inputs = GetInputs();
-        // double[] outputs = nn.Run(inputs);
-        // UseOutputs(outputs);
+        double[] outputs = nn.Run(inputs);
+        UseOutputs(outputs);
         // SetFitness();
         //if (isDraw)
         //{
